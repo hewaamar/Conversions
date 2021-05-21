@@ -47,36 +47,36 @@ namespace Conversions
             double userValue = Convert.ToDouble(valueInput.Text); 
 
             // CALL ON METHOD 1 (INCHES TO CM)
-            double conversion1 = InchesToCm(userValue);
-            outputLabel.Text = $"{userValue} inches is {conversion1} cms";
-
+           
             // CALL ON METHOD 2 (FEET TO CM)
-            double conversion2 = FeetToCm(userValue);
-            outputLabel.Text = $"{userValue} feet is {conversion2} cms";
-
+           
             // CALL ON METHOD 3 (YARDS TO M)
-            double conversion3 = YardsToMetres(userValue);
-            outputLabel.Text = $"{userValue} yards is {conversion3} metres";
+           
 
             // CALL ON METHOD 4 (MILES TO KM)
-            double conversion4 = MilesToKm(userValue);
-            outputLabel.Text = $"{userValue} miles is {conversion4} kms";
-
+           
             if (userInput == 1)
             {
-                InchesToCm(userValue);
+                double conversion1 = InchesToCm(userValue);
+                outputLabel.Text = $"{userValue} inches is {conversion1} cms";
+
             }
             else if (userInput == 2)
             {
-                FeetToCm(userValue);
+                double conversion2 = FeetToCm(userValue);
+                outputLabel.Text = $"{userValue} feet is {conversion2} cms";
+
             }
             else if (userInput == 3)
             {
-                YardsToMetres(userValue);
+                double conversion3 = YardsToMetres(userValue);
+                outputLabel.Text = $"{userValue} yards is {conversion3} metres";
             }
             else if (userInput == 4)
             {
-                MilesToKm(userValue);
+                double conversion4 = MilesToKm(userValue);
+                outputLabel.Text = $"{userValue} miles is {conversion4} kms";
+
             }
             else
             {
