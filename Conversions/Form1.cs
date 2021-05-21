@@ -43,42 +43,43 @@ namespace Conversions
 
         private void convertButton_Click(object sender, EventArgs e)
         {
-            int userInput = Convert.ToInt32(choiceInput.Text);
-            double userValue = Convert.ToDouble(valueInput.Text); 
+            string userInput = choiceInput.Text;
+            double userValue = Convert.ToDouble(valueInput.Text);
 
-            // CALL ON METHOD 1 (INCHES TO CM)
-           
-            // CALL ON METHOD 2 (FEET TO CM)
-           
-            // CALL ON METHOD 3 (YARDS TO M)
-           
-
-            // CALL ON METHOD 4 (MILES TO KM)
-           
-            if (userInput == 1)
+            try
             {
-                double conversion1 = InchesToCm(userValue);
-                outputLabel.Text = $"{userValue} inches is {conversion1} cms";
+
+
+
+                if (userInput == "1")
+                {
+                    double conversion1 = InchesToCm(userValue);
+                    outputLabel.Text = $"{userValue} inches is {conversion1} cms";
+
+                }
+                else if (userInput == "2")
+                {
+                    double conversion2 = FeetToCm(userValue);
+                    outputLabel.Text = $"{userValue} feet is {conversion2} cms";
+
+                }
+                else if (userInput == "3")
+                {
+                    double conversion3 = YardsToMetres(userValue);
+                    outputLabel.Text = $"{userValue} yards is {conversion3} metres";
+                }
+                else if (userInput == "4")
+                {
+                    double conversion4 = MilesToKm(userValue);
+                    outputLabel.Text = $"{userValue} miles is {conversion4} kms";
+                }
+                else
+                {
+                    outputLabel.Text = "please input a numerical value between 1 & 4.";
+                }
 
             }
-            else if (userInput == 2)
-            {
-                double conversion2 = FeetToCm(userValue);
-                outputLabel.Text = $"{userValue} feet is {conversion2} cms";
-
-            }
-            else if (userInput == 3)
-            {
-                double conversion3 = YardsToMetres(userValue);
-                outputLabel.Text = $"{userValue} yards is {conversion3} metres";
-            }
-            else if (userInput == 4)
-            {
-                double conversion4 = MilesToKm(userValue);
-                outputLabel.Text = $"{userValue} miles is {conversion4} kms";
-
-            }
-            else
+            catch 
             {
                 outputLabel.Text = "please input a numerical value between 1 & 4.";
             }
