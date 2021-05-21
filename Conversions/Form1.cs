@@ -38,7 +38,7 @@ namespace Conversions
         public double MilesToKm(double miles)
         {
             double kilom = miles * 1.6;
-            //return kilom;  
+            return kilom;  
         }
 
         private void convertButton_Click(object sender, EventArgs e)
